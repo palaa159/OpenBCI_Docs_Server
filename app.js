@@ -18,7 +18,7 @@ var express = require('express'),
     fs = require('fs'),
     mdList = [],
     _ = require('underscore'),
-    port = 8080;
+    port = 80;
 
 // =====
 
