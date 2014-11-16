@@ -4,7 +4,7 @@ var GitHubApi = require('github'),
     filePath = 'mdlist.json',
     _ = require('underscore'),
     https = require('https'),
-    prefixUrl = 'https://raw.githubusercontent.com/palaa159/Docs/master/',
+    prefixUrl = 'https://raw.githubusercontent.com/openbci/Docs/master/',
     MDLIST = [];
 
 var gh = new GitHubApi({
@@ -19,7 +19,7 @@ var gh = new GitHubApi({
 var fetch = function(cb) {
     gh.repos.getContent({
         // optional:
-        user: "palaa159",
+        user: "openbci",
         repo: 'Docs',
         path: ''
     }, function(err, res) {
