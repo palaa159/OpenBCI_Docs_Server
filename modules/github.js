@@ -17,13 +17,24 @@ var gh = new GitHubApi({
 });
 
 var fetch = function(cb) {
+    MDLIST = [];
+    // delete filePath
+    // fs.unlinkSync(filePath);
+    gh.authenticate({
+        type: 'oauth',
+        key: '1b619f378e1cc337a7c0',
+        secret: 'e581c1013177861f97c13d979272fba6f9a31a21'
+    });
     gh.repos.getContent({
         // optional:
         user: "openbci",
         repo: 'Docs',
         path: ''
     }, function(err, res) {
+        if (err) throw err;
         // console.log(res); // array
+        // console.log(res.n);
+        // var allMDs = _.contains(res, )
         res.forEach(function(item) {
             if (item.name.indexOf('.md') > -1 && item.name !== 'README.md') {
                 // Parse MD
@@ -33,15 +44,21 @@ var fetch = function(cb) {
                     res.on('data', function(raw) {
                         var d = raw.toString();
                         d = d.substr(d.indexOf('# ') + 2, d.indexOf('\n') - 2);
-                        console.log(d);
+                        // console.log(d);
                         MDLIST.push({
                             filename: item.name.substr(0, item.name.indexOf('.md')),
                             title: d
                         });
-                        MDLIST = _.unique(MDLIST);
+                    });
+                    res.on('end', function() {
+                        console.log('data scraped!');
+                        MDLIST = _.sortBy(MDLIST, function(o) {
+                            return o.filename;
+                        });
                         fs.writeFile(filePath, JSON.stringify(MDLIST), function(err) {
                             if (err) throw err;
                             console.log('It\'s saved!');
+                            // console.log(MDLIST);
                             cb();
                         });
                     });
