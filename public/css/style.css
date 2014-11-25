@@ -7,9 +7,9 @@ header {
 	text-shadow:0 !important;
 }
 
-
 .header{
 	text-shadow:none !important;
+	padding:0 !important;
 }
 
 .header .right iframe {
@@ -18,6 +18,10 @@ header {
 
 .header li{
 	border-right: none !important;
+}
+
+.header li a {
+	color: #dddddd;
 }
 
 .page {
@@ -29,13 +33,45 @@ header {
 	height: 100%;
 }
 
+.menubar{
+	width:230px; /*Changing this effects content container*/
+}
+
+.menubar .section{
+	padding: 20px !important;
+}
+
 .selected {
 	background: #E6E6E6;
+/*	margin-left: -20px;
+	margin-right: -20px;
+	padding-right: 20px;
+	padding-left: 20px;
+	position: relative;
+	display: block;*/
+}
+
+a.mainMenuItem{
+	font-family: montserrat, sans-serif;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: bold;
+	color: #505050;
+	line-height: 1.2 !important;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	margin-left: -20px;
+	margin-right: -20px;
+	padding-right: 20px;
+	padding-left: 20px;
+	position: relative;
+	display: block;
 }
 
 .headerlogo {
 	float: left;
-	width: 30px;
+	width: 40px;
+	padding:5px 10px;
 }
 
 .headerColor {
@@ -59,12 +95,13 @@ header {
 }
 
 .openbciheader {
-	position: absolute;
+	position: relative;
 	color: white;
-	margin-left: 60px;
+	margin-left: 10px;
 	font-size: 20px;
 	font-family: 'Michroma', sans-serif;
 	line-height: 36px;
+	margin-top: 7px;
 	letter-spacing: 2.5px;
 	z-index: 100;
 	float: left;
@@ -73,3 +110,35 @@ header {
 .content-img {
 	width: 100%;
 }
+
+h1{
+	font-size: 24px !important;
+}
+
+.level-2 {
+	font-family: montserrat, sans-serif;
+	color: #666666 !important;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+.level-3 {
+	font-family: montserrat, sans-serif;
+	text-transform: none !important;
+	width: 180px !important;
+}
+
+.menu a{
+/*	width: 200px !important;*/
+	/*overflow: ellipsis;*/
+}
+
+.menu a.active{
+	color: #2badad !important;
+}
+
+.menu a.active:after {
+	visibility: hidden !important;
+}
+
+
