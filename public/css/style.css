@@ -10,6 +10,9 @@ header {
 .header{
 	text-shadow:none !important;
 	padding:0 !important;
+	height: 49px;
+	border-bottom: solid 3.7px;
+	border-bottom-color: #DDDDDC;
 }
 
 .header .right iframe {
@@ -18,10 +21,6 @@ header {
 
 .header li{
 	border-right: none !important;
-}
-
-.header li a {
-	color: #dddddd;
 }
 
 .page {
@@ -54,7 +53,7 @@ header {
 a.mainMenuItem{
 	font-family: montserrat, sans-serif;
 	text-transform: uppercase;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: bold;
 	color: #505050;
 	line-height: 1.2 !important;
@@ -112,7 +111,7 @@ a.mainMenuItem{
 }
 
 h1{
-	font-size: 24px !important;
+	font-size: 28px !important;
 }
 
 .level-2 {
@@ -141,4 +140,13 @@ h1{
 	visibility: hidden !important;
 }
 
+.navbar-nav {
+	position: relative;
+	top: 15px;
+	left: 30px;
+}
 
+.header li a {
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+}
