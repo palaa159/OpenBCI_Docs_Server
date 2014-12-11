@@ -37,7 +37,7 @@ app.renderPage = function(res, page) {
     console.log(mdList);
     res.render('index', {
         title: app.locals.title,
-        mdList: mdList,
+        mdList: JSON.stringify(mdList),
         prefixUrl: github.prefixUrl,
         mdUrl: page + '.md'
     });

@@ -7059,3 +7059,11 @@ sending
 [ { filename: '01-8bitstart', title: 'OpenBCI Getting Started' },
   { filename: '02-OpenBCI_GUI',
     title: 'Up & Running w/ the OpenBCI GUI' } ]
+incoming request from ---> 173.225.73.99
+### requesting ---> /
+incoming request from ---> 173.225.73.99
+### requesting ---> /01-8bitstart
+sending
+[ { filename: '01-8bitstart', title: 'OpenBCI Getting Started' },
+  { filename: '02-OpenBCI_GUI',
+    title: 'Up & Running w/ the OpenBCI GUI' } ]

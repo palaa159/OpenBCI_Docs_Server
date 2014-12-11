@@ -22,7 +22,7 @@
 
   <div class='header headerColor'>
     <div class='left'>
-        <a href="http://openbci.com"><img class="headerlogo" src ="public/img/headerlogofront.png"/></a>
+        <a href="http://`openbci.com"><img class="headerlogo" src ="public/img/headerlogofront.png"/></a>
         <a href="http://openbci.com"><div class ="openbciheader">O<span class ="shorterlogo">PEN</span>BCI<span id="headerTrademark">TM</span></div></a>
 
 <!--         <ul class="nav navbar-nav">
@@ -71,7 +71,8 @@
       fetcher: Flatdoc.file('https://rawgit.com/openbci/Docs/master/<%= mdUrl %>')
     });
     var prefixUrl = "<%= prefixUrl %>",
-        mdList = JSON.parse('<%-JSON.stringify(mdList)%>');
+        mdList = <%- mdList %>;
+        // console.log(mdList);
         // console.log(mdList);
     $('#editLink').attr({
       href: 'https://github.com/OpenBCI/docs/edit/master/<%= mdUrl %>'
